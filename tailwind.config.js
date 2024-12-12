@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const tailwind = require("tailwindcss-animate")
+import tailwind from "tailwindcss-animate" 
 export default {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,jsx}"],
