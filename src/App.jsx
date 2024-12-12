@@ -46,7 +46,7 @@ import Instructor_Auth from "./Auth/Instructor_Auth";
 import Admin_Course_Management from "./Pages/admin/Admin_CourseManagement";
 import Purshased_Course_Overview from "./Pages/student/Student_Purchased_Course_Overview";
 import StudentDashboard from "./Pages/student/Student_Dashboard";
-import All_Course_Component from "./Pages/student/Student_All_course";
+import All_Course_Component from "./Pages/student/Student_All_Course";
 import QuizConponentOverview from "./Pages/student/Quiz_Component/StudentQuizOverview";
 import InstructorCourseManagement from "./Pages/instructor/CourseManagement/InstructorCourseManagement";
 import InstructorCourseOverview from "./Pages/instructor/CourseManagement/InstructorCourseOverview";
