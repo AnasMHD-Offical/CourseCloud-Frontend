@@ -2,7 +2,7 @@ import { axios_instance } from "@/Config/axios_instance";
 import { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import "cloudinary-video-player/dist/cld-video-player.min.css";
-import cloudinary from "cloudinary-video-player";
+// import cloudinary from "cloudinary-video-player";
 import { set_video_tutorial_progress } from "@/Redux/Slices/Video_tutorial_progress";
 import { LucideGlobeLock } from "lucide-react";
 
