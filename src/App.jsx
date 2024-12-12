@@ -22,7 +22,7 @@ import Admin_Auth from "./Auth/Admin_Auth";
 import Admin_Profile from "./Pages/admin/Admin_Profile";
 import Admin_Dashboard from "./Pages/admin/Admin_Dashboard";
 import Instructor from "./Components/main/Instructor_Component";
-import Instructor_Create_Course_1 from "./Pages/instructor/Instructor_Create_Course_1";
+import Instructor_Create_Course_1 from "./Pages/instructor/Instructor_Create_Course_1.jsx";
 import Instructor_Profile from "./Pages/instructor/Instructor_Profile";
 import Instructor_Create_Course_Plan from "./Pages/instructor/Instructor_Create_Course_Plan";
 import Instructor_Create_Course_Curriculum from "./Pages/instructor/Instructor_Create_Course_Curriculum";
