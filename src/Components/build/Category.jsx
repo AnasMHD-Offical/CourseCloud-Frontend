@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/Components/ui/button.jsx";
 import { Input } from "@/Components/ui/input";
-import { Textarea } from "@/Components/textarea";
+import { Textarea } from "@/Components/ui/textarea.jsx";
 import { Link } from "react-router-dom";
 import {
   Accordion,
