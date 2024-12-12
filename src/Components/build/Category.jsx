@@ -11,7 +11,7 @@ import {
   CirclePlus,
   Delete,
 } from "lucide-react";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/Components/ui/button.jsx";
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/textarea";
 import { Link } from "react-router-dom";
