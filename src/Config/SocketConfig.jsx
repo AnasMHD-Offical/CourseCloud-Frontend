@@ -29,7 +29,7 @@ export function SocketProvider({ children }) {
 //     sendMessage("What is javascript")
 //   }, []);
   useEffect(() => {
-    const socketInstance = io('http://localhost:8080')
+    const socketInstance = io('https://coursecloud-backend.anasmhdoffical.tech')
 
     socketInstance.on('connect', () => {
       setIsConnected(true)
