@@ -49,6 +49,7 @@ import { CourseReviews } from "./ReviewAndRatings/course_review";
 import Chat from "./AskDoubt_Component/Chat";
 import SavedNotes from "./Student_SavedNotes";
 import Cloudinary_VideoPlayer from "../../Utils/Cloudinary_VideoPlayer.jsx";
+import { SocketProvider } from "@/Config/SocketConfig";
 
 export default function Purshased_Course_Overview() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -461,7 +462,9 @@ export default function Purshased_Course_Overview() {
                     <AssignmentComponent assignment={currentLesson} />
                   </TabsContent>
                   <TabsContent value="Ask your doubts">
-                    <Chat />
+                    <SocketProvider>
+                      <Chat />
+                    </SocketProvider>
                   </TabsContent>
                   <TabsContent value="Saved Notes">
                     <SavedNotes />
@@ -640,7 +643,11 @@ export default function Purshased_Course_Overview() {
                 {selectedNav === "Assignments" && (
                   <AssignmentComponent assignment={currentLesson} />
                 )}
-                {selectedNav === "Ask your doubts" && <Chat />}
+                {selectedNav === "Ask your doubts" && (
+                  <SocketProvider>
+                    <Chat />
+                  </SocketProvider>
+                )}
                 {selectedNav === "Saved Notes" && <SavedNotes />}
                 {selectedNav === "Reviews & Ratings" && <CourseReviews />}
               </div>

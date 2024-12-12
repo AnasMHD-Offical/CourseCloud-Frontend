@@ -16,15 +16,13 @@ import "./index.css";
 
 const queryClient = new QueryClient();
 createRoot(document.getElementById("root")).render(
-  <SocketProvider>
-    <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT_ID}>
-      <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
-          <StrictMode>
-            <App />
-          </StrictMode>
-        </Provider>
-      </QueryClientProvider>
-    </GoogleOAuthProvider>
-  </SocketProvider>
+  <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT_ID}>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <StrictMode>
+          <App />
+        </StrictMode>
+      </Provider>
+    </QueryClientProvider>
+  </GoogleOAuthProvider>
 );
