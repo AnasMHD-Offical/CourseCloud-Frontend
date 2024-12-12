@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Eye, EyeOff, Home } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Formik, Form, Field } from "formik";
 import * as yup from "yup";
 import {
@@ -444,114 +444,121 @@ export default function Profile({ current_role, user_route }) {
                     </div>
                   )}
                   {/* Current password */}
-                 {!user_data?.googleId && <div>
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Current Password
-                    </label>
-                    <div className="relative">
-                      <Field
-                        as={Input}
-                        id="current_password"
-                        name="current_password"
-                        className="h-10"
-                        type={showCurrentPassword ? "text" : "password"}
-                        placeholder="Your password"
-                      />
-                      <button
-                        type="button"
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                        onClick={() =>
-                          setShowCurrentPassword(!showCurrentPassword)
-                        }
+                  {!user_data?.googleId && (
+                    <div>
+                      <label
+                        htmlFor="password"
+                        className="block text-sm font-medium text-gray-700"
                       >
-                        {showCurrentPassword ? (
-                          <EyeOff className="h-4 w-4 text-gray-400" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-gray-400" />
-                        )}
-                      </button>
-                      {errors.current_password && touched.current_password && (
-                        <div className="text-sm text-red-500">
-                          {errors.current_password}
-                        </div>
-                      )}
+                        Current Password
+                      </label>
+                      <div className="relative">
+                        <Field
+                          as={Input}
+                          id="current_password"
+                          name="current_password"
+                          className="h-10"
+                          type={showCurrentPassword ? "text" : "password"}
+                          placeholder="Your password"
+                        />
+                        <button
+                          type="button"
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                          onClick={() =>
+                            setShowCurrentPassword(!showCurrentPassword)
+                          }
+                        >
+                          {showCurrentPassword ? (
+                            <EyeOff className="h-4 w-4 text-gray-400" />
+                          ) : (
+                            <Eye className="h-4 w-4 text-gray-400" />
+                          )}
+                        </button>
+                        {errors.current_password &&
+                          touched.current_password && (
+                            <div className="text-sm text-red-500">
+                              {errors.current_password}
+                            </div>
+                          )}
+                      </div>
                     </div>
-                  </div>}
+                  )}
                   {/* New password */}
-                  {!user_data?.googleId && <div>
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      New Password
-                    </label>
-                    <div className="relative">
-                      <Field
-                        as={Input}
-                        id="new_password"
-                        name="new_password"
-                        className="h-10"
-                        type={showNewPassword ? "text" : "password"}
-                        placeholder="Your password"
-                      />
-                      <button
-                        type="button"
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                        onClick={() => setShowNewPassword(!showNewPassword)}
+                  {!user_data?.googleId && (
+                    <div>
+                      <label
+                        htmlFor="password"
+                        className="block text-sm font-medium text-gray-700"
                       >
-                        {showNewPassword ? (
-                          <EyeOff className="h-4 w-4 text-gray-400" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-gray-400" />
+                        New Password
+                      </label>
+                      <div className="relative">
+                        <Field
+                          as={Input}
+                          id="new_password"
+                          name="new_password"
+                          className="h-10"
+                          type={showNewPassword ? "text" : "password"}
+                          placeholder="Your password"
+                        />
+                        <button
+                          type="button"
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                          onClick={() => setShowNewPassword(!showNewPassword)}
+                        >
+                          {showNewPassword ? (
+                            <EyeOff className="h-4 w-4 text-gray-400" />
+                          ) : (
+                            <Eye className="h-4 w-4 text-gray-400" />
+                          )}
+                        </button>
+                        {errors.new_password && touched.new_password && (
+                          <div className="text-sm text-red-500">
+                            {errors.new_password}
+                          </div>
                         )}
-                      </button>
-                      {errors.new_password && touched.new_password && (
-                        <div className="text-sm text-red-500">
-                          {errors.new_password}
-                        </div>
-                      )}
+                      </div>
                     </div>
-                  </div>}
+                  )}
                   {/* Confirm password */}
-                  {!user_data?.googleId && <div>
-                    <label
-                      htmlFor="confirmPassword"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Confirm password
-                    </label>
-                    <div className="relative">
-                      <Field
-                        as={Input}
-                        id="confirmPassword"
-                        name="confirmPassword"
-                        className="h-10"
-                        type={showConfirmPassword ? "text" : "password"}
-                        placeholder="Your password"
-                      />
-                      <button
-                        type="button"
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                        onClick={() =>
-                          setShowConfirmPassword(!showConfirmPassword)
-                        }
+                  {!user_data?.googleId && (
+                    <div>
+                      <label
+                        htmlFor="confirmPassword"
+                        className="block text-sm font-medium text-gray-700"
                       >
-                        {showConfirmPassword ? (
-                          <EyeOff className="h-4 w-4 text-gray-400" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-gray-400" />
+                        Confirm password
+                      </label>
+                      <div className="relative">
+                        <Field
+                          as={Input}
+                          id="confirmPassword"
+                          name="confirmPassword"
+                          className="h-10"
+                          type={showConfirmPassword ? "text" : "password"}
+                          placeholder="Your password"
+                        />
+                        <button
+                          type="button"
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                          onClick={() =>
+                            setShowConfirmPassword(!showConfirmPassword)
+                          }
+                        >
+                          {showConfirmPassword ? (
+                            <EyeOff className="h-4 w-4 text-gray-400" />
+                          ) : (
+                            <Eye className="h-4 w-4 text-gray-400" />
+                          )}
+                        </button>
+                        {errors.confirmPassword && touched.confirmPassword && (
+                          <div className="text-sm text-red-500">
+                            {errors.confirmPassword}
+                          </div>
                         )}
-                      </button>
-                      {errors.confirmPassword && touched.confirmPassword && (
-                        <div className="text-sm text-red-500">
-                          {errors.confirmPassword}
-                        </div>
-                      )}
+                      </div>
                     </div>
-                  </div>}
+                  )}
                   {/* Upload picture */}
                   <div>
                     <label

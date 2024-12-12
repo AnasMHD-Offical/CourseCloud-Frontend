@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Bold, Italic, List, Clock, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/Components/ui/button";
+import { Textarea } from "@/Components/ui/textarea";
 import { Separator } from "@/Components/ui/separator";
 import { useSelector } from "react-redux";
 import { axios_instance } from "@/Config/axios_instance";

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "@/Components/ui/progress";
 import { Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { useEffect } from "react";
 import { axios_instance } from "@/Config/axios_instance";
 

@@ -18,14 +18,14 @@ import {
   X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
+} from "@/Components/ui/dropdown-menu";
+import { Input } from "@/Components/ui/input";
 import {
   Pagination,
   PaginationContent,
@@ -34,9 +34,9 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from "@/Components/ui/pagination";
+import { Separator } from "@/Components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/Components/ui/tabs";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import PurshacedCourseContainer from "@/Components/base/PurshacedCourseContainer";

@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { QuizCard } from "./QuizContent";
 import { Timer } from "./QuizTimer";
 import { Results } from "./QuizResult";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "@/Components/ui/progress";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Dialog,
@@ -18,7 +18,7 @@ import confetti from "canvas-confetti";
 import { useSelector } from "react-redux";
 import { toast } from "sonner";
 import { axios_instance } from "@/Config/axios_instance";
-import { title } from "process";
+
 const questions = [
   {
     question: "What does HTML stand for?",

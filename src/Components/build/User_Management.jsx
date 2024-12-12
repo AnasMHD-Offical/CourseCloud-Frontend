@@ -9,8 +9,8 @@ import {
   Menu,
   CircleChevronLeft,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 import {
   Table,
   TableBody,
@@ -18,8 +18,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+} from "../ui/table";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -29,7 +29,7 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "../ui/breadcrumb";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import { Link } from "react-router-dom";
 import { axios_instance } from "@/Config/axios_instance";
 import { toast } from "sonner";

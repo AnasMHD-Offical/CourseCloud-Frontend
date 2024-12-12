@@ -1,6 +1,6 @@
-import { Skeleton } from "@/components/ui/skeleton"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Skeleton } from "../ui/skeleton"
+import { Button } from "../ui/button"
+import { Card, CardContent, CardFooter } from "../ui/card"
 
 export default function LandingPageFallback() {
   return (

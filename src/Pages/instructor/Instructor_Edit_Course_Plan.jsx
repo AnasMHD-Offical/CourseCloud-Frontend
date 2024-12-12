@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Search, User, Plus, Goal, Delete } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
 import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { set_course_plan } from "@/Redux/Slices/CoursePlan";

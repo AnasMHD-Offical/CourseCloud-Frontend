@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "../ui/card";
 import { Heart, Star } from "lucide-react";
 import { Button } from "../ui/button";
 import { useSelector } from "react-redux";

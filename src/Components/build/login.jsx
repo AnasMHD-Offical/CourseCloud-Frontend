@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { axios_instance } from "../../Config/axios_instance";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 import { GoogleLogin } from "@react-oauth/google";
 import * as yup from "yup";
 import {
@@ -12,7 +12,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../ui/card";
 import { Axis3DIcon, EyeIcon, EyeOffIcon, OctagonX } from "lucide-react";
 import { Formik, Form, Field } from "formik";
 import { toast } from "sonner";

@@ -1,8 +1,8 @@
 //Exporting essential modules and components
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup";
@@ -12,7 +12,7 @@ import { OTP_Modal } from "./OTP_Modal";
 import { toast } from "sonner";
 import { Card } from "../ui/card";
 import { useUser_Management_Mutation } from "@/Hooks/Coustom_Hooks_useFetching";
-import { useQueryClient , useMutation} from "@tanstack/react-query";
+import { useQueryClient, useMutation } from "@tanstack/react-query";
 //Declaring form validation schema
 const form_validation = yup.object({
   name: yup
@@ -115,9 +115,9 @@ function Register({ current_role }) {
     }
   };
   const mutation = useMutation({
-    mutationFn:handle_form_submit,
+    mutationFn: handle_form_submit,
     onSuccess: () => {
-      queryClient.invalidateQueries({queryKey:"users"});
+      queryClient.invalidateQueries({ queryKey: "users" });
     },
   });
   //Decalring functions for handle form submit
@@ -221,7 +221,9 @@ function Register({ current_role }) {
         />
         <div className="w-full max-w-2xl md:max-w-3xl lx:max-w-4xl space-y-4 bg-white p-8 rounded-lg sm:rounded-s-sm shadow-md">
           {/* Heading for register */}
-          <h1 className="text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600 h-12">Register</h1>
+          <h1 className="text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600 h-12">
+            Register
+          </h1>
           {/* Form starts here */}
           <Formik
             initialValues={{

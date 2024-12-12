@@ -7,7 +7,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "../ui/pagination";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Sample data to paginate through

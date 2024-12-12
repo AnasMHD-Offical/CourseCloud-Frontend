@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "@/Components/ui/progress";
 import { Clock } from "lucide-react";
 
 export function Timer({ initialTime, onTimeUp, onTimeTaken }) {

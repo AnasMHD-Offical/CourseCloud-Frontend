@@ -20,7 +20,7 @@ import {
   Medal,
   GraduationCap,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
 import {
   AreaChart,
   Area,
@@ -40,7 +40,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/Components/ui/tooltip";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/Components/ui/button";
 import { Link } from "react-router-dom";

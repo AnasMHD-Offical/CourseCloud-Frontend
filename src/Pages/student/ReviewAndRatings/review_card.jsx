@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card, CardContent } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar"
+import { Card, CardContent } from "@/Components/ui/card"
 import { StarRating } from "./star_rating"
 
 export function ReviewCard({ review }) {

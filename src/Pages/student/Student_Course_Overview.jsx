@@ -19,18 +19,18 @@ import {
   ShoppingBag,
   ShoppingBagIcon,
 } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-// import { Separator } from '@/components/ui/separator'
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar";
+import { Badge } from "@/Components/ui/badge";
+import { Button } from "@/Components/ui/button";
+import { Progress } from "@/Components/ui/progress";
+// import { Separator } from '@/Components/ui/separator'
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/Components/ui/tabs'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/Components/ui/accordion";
 import {
   Dialog,
   DialogContent,
@@ -38,11 +38,11 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/Components/ui/dialog";
 // import Image from 'next/image'
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-// import { toast } from '@/components/ui/use-toast'
+// import { toast } from '@/Components/ui/use-toast'
 import { toast } from "sonner";
 import Footer from "@/Components/base/Footer";
 import Header from "@/Components/base/Header";

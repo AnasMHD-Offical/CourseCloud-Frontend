@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/Components/ui/radio-group"
+import { Label } from "@/Components/ui/label"
 
 export function QuizCard({ question, options, selectedAnswer, onSelectAnswer, questionNumber }) {
   return (
