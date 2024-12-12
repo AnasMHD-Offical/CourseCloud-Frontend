@@ -7,7 +7,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@/Components/ui/pagination";
 import { Button } from "../ui/button";
 
 export default function PaginationComp({ page, setPage, limit, total }) {
