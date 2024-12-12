@@ -1,6 +1,5 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Toaster } from "sonner";
 import Student_Login from "./Pages/student/Student_Login";
 import Student_Register from "./Pages/student/Student_Register";
