@@ -25,8 +25,8 @@ function CategorySelect() {
       console.log(response);
       // const {}
       setCategories(response?.data?.categories);
-      const AllSubCategories = response.data.categories
-        .map((category) => category.sub_category)
+      const AllSubCategories = response?.data?.categories
+        .map((category) => category?.sub_category)
         .flat()
         .filter((sub) => sub.status !== false);
       const refinedSubcategories = AllSubCategories.slice(0, 12);
@@ -44,19 +44,19 @@ function CategorySelect() {
     get_category();
   }, []);
   const handleCategoryChange = (value) => {
-    setSelectedCategory(value.title);
+    setSelectedCategory(value?.title);
     if (value.title === "All Category") {
       const AllSubCategories = categories
-        .map((category) => category.sub_category)
+        .map((category) => category?.sub_category)
         .flat()
-        .filter((sub) => sub.status !== false);
+        .filter((sub) => sub?.status !== false);
       const refinedSubcategories = AllSubCategories.slice(0, 12);
       setSubcategory(refinedSubcategories);
     } else {
       const subCategory = categories
-        .filter((category) => value._id === category._id)
-        .map((sub) => sub.sub_category)[0]
-        .filter((sub) => sub.status === true);
+        .filter((category) => value?._id === category?._id)
+        .map((sub) => sub?.sub_category)[0]
+        .filter((sub) => sub?.status === true);
       console.log(subCategory);
       setSubcategory(subCategory);
     }
@@ -86,7 +86,7 @@ function CategorySelect() {
           {/* Mobile dropdown */}
           <div className="lg:hidden mb-8 rounded-full">
             <Select
-              value={selectedCategory.title}
+              value={selectedCategory?.title}
               onValueChange={(value) => handleCategoryChange(value)}
             >
               <SelectTrigger className="w-full rounded-3xl text-white bg-gradient-to-r from-primary to-purple-600 h-12 ps-6">
@@ -94,8 +94,8 @@ function CategorySelect() {
               </SelectTrigger>
               <SelectContent>
                 {categories.map((category) => (
-                  <SelectItem key={category._id} value={category}>
-                    {category.title}
+                  <SelectItem key={category?._id} value={category}>
+                    {category?.title}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -106,17 +106,17 @@ function CategorySelect() {
           <div className="hidden lg:block">
             <Tabs
               defaultValue=""
-              value={selectedCategory.title}
+              value={selectedCategory?.title}
               onValueChange={(value) => handleCategoryChange(value)}
             >
               <TabsList className="grid w-full grid-cols-3  text-white bg-gradient-to-r from-primary to-purple-600 lg:grid-cols-10 gap-4 h-12 ps-2 rounded-full">
                 {categories.map((category) => (
                   <TabsTrigger
-                    key={category._id}
+                    key={category?._id}
                     className="rounded-full h-9 "
                     value={category}
                   >
-                    {category.title}
+                    {category?.title}
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -133,7 +133,7 @@ function CategorySelect() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() =>
-                    navigate(`/category/${sub.category_id}/${sub.title}`)
+                    navigate(`/category/${sub?.category_id}/${sub?.title}`)
                   }
                 >
                   <h3 className="font-semibold text-lg mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
