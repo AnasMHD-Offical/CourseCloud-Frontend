@@ -9,8 +9,8 @@ import {
   Sparkle,
   LandPlot,
 } from "lucide-react";
-import { Button } from "/Components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet";
+import { Button } from "../ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Link, Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Admin_Auth from "@/Auth/Admin_Auth";

@@ -11,9 +11,9 @@ import {
   BookOpen,
   TrendingUp,
 } from "lucide-react";
-import { Button } from "@/Components/ui/button";
+import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from "sonner";
