@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/Components/ui/button.jsx";
+import { Dialog, DialogContent, DialogTrigger } from "@/Components/ui/dialog.jsx";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card.jsx";
 import { AssignmentList } from "./Components/AssignmentList";
 import { AssignmentDetails } from "./Components/AssignmentDetails";
 import { PerformanceChart } from "./Components/StudentPerformance";

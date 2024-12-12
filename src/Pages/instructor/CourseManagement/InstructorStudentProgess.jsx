@@ -1,4 +1,3 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Breadcrumb from "./Components/Breadcrumb";
 import { StudentsTable } from "./Components/StudentTable";
 import PaginationComp from "@/Components/base/Pagination";
