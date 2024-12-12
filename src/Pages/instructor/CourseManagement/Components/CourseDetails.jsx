@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Card, CardContent, CardHeader } from "@/Components/ui/card"
 import { Star, Clock, Award, BookOpen, CheckCircle } from 'lucide-react'
 
 export default function CourseDetail({ course }) {

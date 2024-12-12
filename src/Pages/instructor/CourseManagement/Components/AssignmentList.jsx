@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import { ChevronDown } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import { Button } from "@/Components/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { ScrollArea } from "@/components/ui/scroll-area"
+} from "@/Components/ui/collapsible"
+import { ScrollArea } from "@/Components/ui/scroll-area"
 
 export function AssignmentList({ assignments, onSelect }) {
   return (

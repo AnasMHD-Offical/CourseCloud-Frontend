@@ -5,9 +5,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+} from "@/Components/ui/table";
+import { Button } from "@/Components/ui/button";
+import { Progress } from "@/Components/ui/progress";
 import { useNavigate } from "react-router-dom";
 import StudentDetails from "../InstructorStudentDetails";
 

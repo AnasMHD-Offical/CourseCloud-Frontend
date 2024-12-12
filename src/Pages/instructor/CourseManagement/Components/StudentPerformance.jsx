@@ -1,8 +1,8 @@
 "use client"
 
 import { PieChart, Pie } from "recharts"
-import { Card } from "@/components/ui/card"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { Card } from "@/Components/ui/card"
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/Components/ui/chart"
 
 export function PerformanceChart({ performance }) {
   const data = [
