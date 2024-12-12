@@ -48,7 +48,7 @@ import AssignmentComponent from "./Student_Assignment";
 import { CourseReviews } from "./ReviewAndRatings/course_review";
 import Chat from "./AskDoubt_Component/Chat";
 import SavedNotes from "./Student_SavedNotes";
-import Cloudinary_VideoPlayer from "@/Utils/Cloudinary_VideoPlayer";
+import Cloudinary_VideoPlayer from "../../Utils/Cloudinary_VideoPlayer.jsx";
 
 export default function Purshased_Course_Overview() {
   const [isPlaying, setIsPlaying] = useState(false);
