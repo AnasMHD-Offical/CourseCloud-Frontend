@@ -12,7 +12,7 @@ import {
 import { ArrowLeft, PlusCircle, Upload } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import * as yup from "yup";
+import { yup } from "yup";
 import { Formik, Form, Field } from "formik";
 import CloudinaryUploadWidget_Image from "@/Utils/CloudinaryImageUpload";
 import { useEffect, useRef, useState } from "react";
