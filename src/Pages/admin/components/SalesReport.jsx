@@ -7,21 +7,21 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/Components/ui/card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+} from "@/Components/ui/select";
+import { Button } from "@/Components/ui/button";
+import { Calendar } from "@/Components/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/Components/ui/popover";
 import {
   Table,
   TableBody,
@@ -29,7 +29,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/Components/ui/table";
 import { CalendarIcon, Download, FileSpreadsheet } from "lucide-react";
 import { axios_instance } from "@/Config/axios_instance";
 import PaginationComp from "@/Components/base/Pagination";
