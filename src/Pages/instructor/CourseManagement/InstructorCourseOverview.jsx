@@ -1,11 +1,10 @@
 import Breadcrumb from "./Components/Breadcrumb";
 import CourseDetail from "./Components/CourseDetails";
 import CourseCurriculum from "./Components/CourseCurriculum";
-import RevenueStats from "./Components/RevenueStats";
 import { axios_instance } from "@/Config/axios_instance";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ReviewStats from "./Components/ReviewStats";
+import ReviewStats from "./Components/ReviewStats.jsx";
 
 const courseData = {
   courseTitle: "Complete Full Stack Development Course 2024",
