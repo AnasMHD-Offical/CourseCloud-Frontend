@@ -1,14 +1,14 @@
-import { Button } from "@/Components/ui/button";
-import { Input } from "@/Components/ui/input";
-import { Label } from "@/Components/ui/label";
-import { Textarea } from "@/Components/ui/textarea";
+import { Button } from "../../Components/ui/button";
+import { Input } from "../../Components/ui/input";
+import { Label } from "../../Components/ui/label";
+import { Textarea } from "../../Components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/Components/ui/select";
+} from "../../Components/ui/select";
 import { ArrowLeft, PlusCircle, Upload } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,7 +20,7 @@ import { toast } from "sonner";
 import { axios_instance } from "@/Config/axios_instance";
 import { remove_course_plan } from "@/Redux/Slices/CoursePlan";
 import { remove_Course_Curriculum } from "@/Redux/Slices/CourseCuriculum";
-import CustomSuccessDialogBox from "@/Components/build/CustomSuccessDialog";
+import CustomSuccessDialogBox from "../../Components/build/CustomSuccessDialog";
 import { motion } from "framer-motion";
 const validation_form = yup.object({
   title: yup

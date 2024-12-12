@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Search, User, Plus, Goal, Delete } from "lucide-react";
-import { Button } from "@/Components/ui/button";
-import { Input } from "@/Components/ui/input";
+import { Button } from "../../Components/ui/button";
+import { Input } from "../../Components/ui/input";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import {
   Breadcrumb,
@@ -10,7 +10,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/Components/ui/breadcrumb";
+} from "../../Components/ui/breadcrumb";
 // import { Field, Formik, Form } from "formik";
 
 export default function Instructor_Create_Course_1() {

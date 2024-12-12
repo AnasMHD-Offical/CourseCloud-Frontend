@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { ArrowRight, CircleCheckBig, ArrowLeft } from "lucide-react";
-import { Button } from "@/Components/ui/button";
-import { Input } from "@/Components/ui/input";
-import { Textarea } from "@/Components/ui/textarea";
+import { Button } from "../../Components/ui/button";
+import { Input } from "../../Components/ui/input";
+import { Textarea } from "../../Components/ui/textarea";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import CloudinaryUploadWidget_Videos from "@/Utils/CloudinaryVideoUpload";
