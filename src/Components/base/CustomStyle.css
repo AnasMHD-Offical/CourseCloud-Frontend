@@ -1,0 +1,30 @@
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.w-more {
+  width: 36rem !important;
+}
+
+.w-landscape{
+  width: 24rem !important;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .custom-h {
+    height: 512px !important;
+  }
+  .w-landscape{
+    width: 42rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .left-more {
+    left: 28rem !important;
+  }
+}
