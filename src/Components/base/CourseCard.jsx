@@ -54,11 +54,11 @@ function CourseCard({
       if (success) {
         toast.success(message);
         console.log(response);
-        wishlist_mutation(false);
+        // wishlist_mutation(false);
       }
     } catch (error) {
       console.log(error);
-      toast.info(error?.response?.data?.message);
+      toast.info(error?.response?.data?.message || "error getting from here");
     }
   };
 
