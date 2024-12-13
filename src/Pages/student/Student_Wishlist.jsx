@@ -54,6 +54,7 @@ export default function WishlistPage() {
     } catch (error) {
       console.log(error);
       toast.error(error?.response?.data?.message);
+      setLoading(false)
     }
   };
   useEffect(() => {

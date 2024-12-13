@@ -148,31 +148,31 @@ export default function StudentDashboard() {
     (state) => state?.student?.student_data?.student?._id
   );
   const [isOpen, setIsOpen] = useState(false);
-  const [purchasedCourses,setPurchasedCourses] = useState([])
-  const [courseMetadata , setCourseMatadata] = useState([])
+  const [purchasedCourses, setPurchasedCourses] = useState([]);
+  const [courseMetadata, setCourseMatadata] = useState([]);
   const toggleMenu = () => setIsOpen(!isOpen);
-
 
   const get_purchased_courses = async () => {
     try {
       const response = await axios_instance.get(
         `api/get_purchased_courses/${student_id}`
       );
-      const { message, success, purchased_courses , Courses_duration} = response?.data;
-      if(success){
-        setPurchasedCourses(purchased_courses?.courses)
-        setCourseMatadata(Courses_duration)
+      const { message, success, purchased_courses, Courses_duration } =
+        response?.data;
+      if (success) {
+        setPurchasedCourses(purchased_courses?.courses);
+        setCourseMatadata(Courses_duration);
         console.log(response?.data);
       }
     } catch (error) {
       console.log(error);
-      toast.error(error?.response?.data?.message);
+      // toast.error(error?.response?.data?.message);
     }
   };
 
-  useEffect(()=>{
-    get_purchased_courses()
-  },[])
+  useEffect(() => {
+    get_purchased_courses();
+  }, []);
 
   return (
     <div className="min-h-screen w-full xl:w-10/12 bg-gradient-to-br from-blue-50 to-purple-100 text-gray-800">
@@ -544,11 +544,18 @@ export default function StudentDashboard() {
           </Card>
 
           {/* Recently Purchased Courses */}
-          <PurshacedCourseContainer
-            courses={purchasedCourses}
-            course_metadata={courseMetadata}
-            title={"Recently Purchased Courses"}
-          />
+          {purchasedCourses.length > 0 && (
+            <PurshacedCourseContainer
+              courses={purchasedCourses}
+              course_metadata={courseMetadata}
+              title={"Recently Purchased Courses"}
+            />
+          )}
+          {purchasedCourses.length === 0 && 
+          <div>
+            <h1 className="text-4xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Oops!No Courses purchased</h1>
+            <p>Unlock endless opportunities and transform your life. Explore our wide range of courses today!</p>
+          </div>}
 
           {/* Performance Stats */}
           <Card className="overflow-hidden transition-shadow duration-300 hover:shadow-lg mb-8">

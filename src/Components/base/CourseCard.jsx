@@ -35,7 +35,7 @@ function CourseCard({
       if (success) {
         setIsChanged(!isChanged);
         toast.success(message);
-        console.log(response);
+        // console.log(response);
         mutation(false);
       }
     } catch (error) {
@@ -58,7 +58,7 @@ function CourseCard({
       }
     } catch (error) {
       console.log(error);
-      toast.info(error?.response?.data?.message || "Already added to cart");
+      toast.info(error?.response?.data?.message);
     }
   };
 
