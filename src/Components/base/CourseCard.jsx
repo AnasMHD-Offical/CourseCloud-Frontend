@@ -34,13 +34,13 @@ function CourseCard({
       const { success, message } = response?.data;
       if (success) {
         toast.success(message);
-        // setIsChanged(!isChanged);
+        setIsChanged(!isChanged);
         // console.log(response);
         mutation(false);
       }
     } catch (error) {
       console.log(error);
-      toast.error(error?.response?.data?.message);
+      toast.error(error?.response?.data?.message || "Error getting from here");
     }
   };
 
