@@ -37,10 +37,9 @@ export default function Student_Main() {
   const navItems = [
     { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
     { href: "/dashboard/profile", icon: User, label: "Profile" },
-    { href: "/dashboard/courses", icon: BookOpen, label: "All courses" },
+    { href: "/dashboard/courses", icon: BookOpen, label: "My Courses" },
     { href: "/dashboard/wishlist", icon: Heart, label: "Wishlist" },
     { href: "/dashboard/certificates", icon: Medal, label: "Certificates" },
-    { href: "/dashboard/learning", icon: GraduationCap, label: "Learning" },
   ];
   const handleLogout = async () => {
     try {
