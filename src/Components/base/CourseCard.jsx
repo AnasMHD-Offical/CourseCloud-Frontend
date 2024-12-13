@@ -36,11 +36,11 @@ function CourseCard({
         toast.success(message);
         setIsChanged(!isChanged);
         // console.log(response);
-        mutation(false);
+        // mutation(false);
       }
     } catch (error) {
       console.log(error);
-      toast.error(error?.response?.data?.message || "Error getting from here");
+      toast.error(error?.response?.data?.error || "Error getting from here");
     }
   };
 
