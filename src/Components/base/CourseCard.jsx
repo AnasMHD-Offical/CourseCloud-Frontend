@@ -20,7 +20,7 @@ function CourseCard({
     (state) => state?.student?.student_data?.student?._id
   );
   const [isChanged, setIsChanged] = useState();
-  const [BtnText, SetBtnText] = useState("Add To Cart");
+  const [BtnText, SetBtnText] = useState("add_to_cart");
   const navigate = useNavigate();
   const { title, subtitle, thumbnail, rating, reviews, actual_price } = course;
 
@@ -57,7 +57,7 @@ function CourseCard({
       }
     } catch (error) {
       console.log(error);
-      toast.info(error?.response?.data?.message || "already added to cart");
+      toast.info(error?.response?.data?.message || "Already added to cart");
     }
   };
 
@@ -144,8 +144,8 @@ function CourseCard({
           {!isPurchased && (
             <Button
               onClick={
-                BtnText === "Add to Cart" && ""
-                  ? handleAddToCart
+                BtnText === "add_to_cart" || ""
+                  ? () => handleAddToCart()
                   : () => navigate("/cart")
               }
               className="w-full rounded-full  text-white bg-gradient-to-r from-primary to-purple-600 hover:bg-primary-dark transition-colors duration-300"
