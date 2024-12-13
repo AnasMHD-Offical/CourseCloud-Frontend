@@ -551,11 +551,6 @@ export default function StudentDashboard() {
               title={"Recently Purchased Courses"}
             />
           )}
-          {purchasedCourses.length === 0 && 
-          <div>
-            <h1 className="text-4xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">Oops!No Courses purchased</h1>
-            <p>Unlock endless opportunities and transform your life. Explore our wide range of courses today!</p>
-          </div>}
 
           {/* Performance Stats */}
           <Card className="overflow-hidden transition-shadow duration-300 hover:shadow-lg mb-8">

@@ -44,7 +44,13 @@ import { axios_instance } from "@/Config/axios_instance";
 import { useSelector } from "react-redux";
 import CourseContainer from "@/Components/base/CourseContainer";
 import ContainerSkelton from "@/Components/fallback/ContainerSkeleton";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/Components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/Components/ui/select";
 
 export default function All_Course_Component() {
   const student_id = useSelector(
@@ -74,7 +80,7 @@ export default function All_Course_Component() {
   const get_purchased_courses = async () => {
     try {
       const response = await axios_instance.get(
-        `api/get_purchased_courses/${student_id}`,
+        `api/get_purchased_courses/${student_id}`
       );
       const { message, success, purchased_courses, Courses_duration } =
         response?.data;
@@ -87,6 +93,7 @@ export default function All_Course_Component() {
     } catch (error) {
       console.log(error);
       toast.error(error?.response?.data?.message);
+      setIsLoading(false);
     }
   };
 
@@ -263,11 +270,25 @@ export default function All_Course_Component() {
               {isLoading ? (
                 <ContainerSkelton />
               ) : (
-                <PurshacedCourseContainer
-                  title={"All Purchased Courses"}
-                  courses={purchasedCourses}
-                  course_metadata={courseMetadata}
-                />
+                purchasedCourses.length > 0 && (
+                  <PurshacedCourseContainer
+                    title={"All Purchased Courses"}
+                    courses={purchasedCourses}
+                    course_metadata={courseMetadata}
+                  />
+                )
+              )}
+
+              {purchasedCourses.length === 0 && (
+                <div className="p-2">
+                  <h1 className="text-3xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                    Oops!No Courses purchased
+                  </h1>
+                  <p>
+                    Unlock endless opportunities and transform your life.
+                    Explore our wide range of courses today!
+                  </p>
+                </div>
               )}
             </TabsContent>
           </Tabs>

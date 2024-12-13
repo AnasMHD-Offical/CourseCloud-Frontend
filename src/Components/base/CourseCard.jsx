@@ -40,7 +40,7 @@ function CourseCard({
       }
     } catch (error) {
       console.log(error);
-      toast.error(error?.response?.data?.error || "Error getting from here");
+      toast.error(error?.response?.data?.message);
     }
   };
 
