@@ -71,10 +71,9 @@ export default function All_Course_Component() {
   const navItems = [
     { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
     { href: "/profile", icon: User, label: "Profile" },
-    { href: "/courses", icon: BookOpen, label: "All courses" },
+    { href: "/courses", icon: BookOpen, label: "My Courses" },
     { href: "/wishlist", icon: Heart, label: "Wishlist" },
     { href: "/certificates", icon: Medal, label: "Certificates" },
-    { href: "/learning", icon: GraduationCap, label: "Learning" },
   ];
 
   const get_purchased_courses = async () => {
@@ -187,7 +186,7 @@ export default function All_Course_Component() {
                 onClick={toggleMenu}
               />
             )}
-            <h1 className="text-2xl font-bold">All Courses</h1>
+            <h1 className="text-2xl font-bold">My Courses</h1>
           </div>
         </div>
       </motion.header>
@@ -211,7 +210,7 @@ export default function All_Course_Component() {
           </li>
           <li>
             <span className="text-foreground font-medium" aria-current="page">
-              All Course
+              My Course
             </span>
           </li>
         </ol>
@@ -224,48 +223,6 @@ export default function All_Course_Component() {
             defaultValue={activeTab}
             onValueChange={setActiveTab}
           >
-            {/* <TabsList>
-              <TabsTrigger value="enrolled">Enrolled</TabsTrigger>
-              <TabsTrigger value="in-progress">In Progress</TabsTrigger>
-              <TabsTrigger value="completed">Completed</TabsTrigger>
-            </TabsList>
-            <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="relative bg-white rounded-full">
-                <Search className="absolute  left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                <Input
-                  className="w-full rounded-full pl-8 sm:w-[300px]"
-                  placeholder="Search courses..."
-                  type="search"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
-              <div className="flex items-center gap-2">
-                <Select value={sortBy} onValueChange={setSortBy}>
-                  <SelectTrigger className="w-full md:w-[180px] border rounded-full shadow-md bg-slate-50">
-                    <SelectValue placeholder="Sort By" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Courses</SelectItem>
-                    <SelectItem value="popularity">Most Popular</SelectItem>
-                    <SelectItem value="newest">Newest</SelectItem>
-                    <SelectItem value="oldest">Oldest</SelectItem>
-                    <SelectItem value="AlphaAsc">Course : A-Z</SelectItem>
-                    <SelectItem value="AlphaDes">Course : Z-A</SelectItem>
-                  </SelectContent>
-                </Select>
-                <Select value={filter} onValueChange={setFilter}>
-                  <SelectTrigger className="w-full md:w-[180px] border rounded-full shadow-md bg-slate-50">
-                    <SelectValue placeholder="Filter" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Courses</SelectItem>
-                    <SelectItem value="free">Free courses</SelectItem>
-                    <SelectItem value="paid">Paid Courses</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div> */}
             <TabsContent className="mt-6" value={activeTab}>
               {isLoading && purchasedCourses.length !== 0 ? (
                 <ContainerSkelton />
@@ -278,25 +235,6 @@ export default function All_Course_Component() {
               )}
             </TabsContent>
           </Tabs>
-          {/* <div className="mt-8">
-            <Pagination>
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious href="#" />
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationLink href="#">1</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationEllipsis />
-                </PaginationItem>
-                <PaginationItem>
-                  <PaginationNext href="#" />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div> */}
-
           <CourseContainer title={"Top picks for you"} />
         </div>
       </div>

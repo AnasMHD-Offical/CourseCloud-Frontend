@@ -190,10 +190,9 @@ export default function ProfilePage() {
   const navItems = [
     { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
     { href: "/profile", icon: User, label: "Profile" },
-    { href: "/courses", icon: BookOpen, label: "All courses" },
+    { href: "/courses", icon: BookOpen, label: "My Courses" },
     { href: "/wishlist", icon: Heart, label: "Wishlist" },
     { href: "/certificates", icon: Medal, label: "Certificates" },
-    { href: "/learning", icon: GraduationCap, label: "Learning" },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
