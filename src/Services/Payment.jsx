@@ -62,7 +62,7 @@ const RazorpayPayment = ({ price, student_id, courses, handleMutation }) => {
         varient="ghost"
         className="w-full  bg-black text-white hover:bg-primary/90"
         onClick={handlePayment}
-        disabled={isLoading}
+        disabled={isLoading || courses.length === 0}
       >
         Pay Now
       </Button>

@@ -166,11 +166,11 @@ export default function Cloudinary_VideoPlayer({
             //     response?.data?.video_progress?.recently_watched_time
             //   )
             // );
-            handleLessonChange(
-              nextTutorial,
-              currentTutorialIndex + 1,
-              currentTutorialIndex + 2
-            );
+            // handleLessonChange(
+            //   nextTutorial,
+            //   currentTutorialIndex + 1,
+            //   currentTutorialIndex + 2
+            // );
           }
           // handleLessonChange(nextTutorial);
           await axios_instance.put("api/update_lesson_progress", {

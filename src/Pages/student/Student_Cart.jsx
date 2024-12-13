@@ -51,6 +51,7 @@ export default function CartPage() {
       console.log(error);
     }
   };
+  
   useEffect(() => {
     get_cart_items();
   }, [isCartUpdated, isMutated]);
