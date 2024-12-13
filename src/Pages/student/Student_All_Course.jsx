@@ -267,18 +267,6 @@ export default function All_Course_Component() {
               </div>
             </div> */}
             <TabsContent className="mt-6" value={activeTab}>
-              {isLoading ? (
-                <ContainerSkelton />
-              ) : (
-                purchasedCourses.length > 0 && (
-                  <PurshacedCourseContainer
-                    title={"All Purchased Courses"}
-                    courses={purchasedCourses}
-                    course_metadata={courseMetadata}
-                  />
-                )
-              )}
-
               {purchasedCourses.length === 0 && (
                 <div className="p-2">
                   <h1 className="text-3xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
@@ -290,6 +278,18 @@ export default function All_Course_Component() {
                   </p>
                 </div>
               )}
+              {isLoading && purchasedCourses.length !== 0 ? (
+                <ContainerSkelton />
+              ) : (
+                purchasedCourses.length > 0 && (
+                  <PurshacedCourseContainer
+                    title={"All Purchased Courses"}
+                    courses={purchasedCourses}
+                    course_metadata={courseMetadata}
+                  />
+                )
+              )}
+
             </TabsContent>
           </Tabs>
           {/* <div className="mt-8">
