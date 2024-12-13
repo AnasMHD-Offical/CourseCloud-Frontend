@@ -720,6 +720,9 @@ export default function Purshased_Course_Overview() {
                                       video_progress_rate?.lesson_id ===
                                       lesson._id
                                         ? video_progress_rate?.progress
+                                        : lessonProgresses[index]
+                                            ?.video_tutorial_completed
+                                        ? 100
                                         : 0
                                     }% completed`}
                               </Badge>
