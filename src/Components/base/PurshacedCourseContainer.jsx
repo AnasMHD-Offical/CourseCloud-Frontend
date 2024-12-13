@@ -30,20 +30,20 @@ function PurshacedCourseContainer({ courses, title, course_metadata }) {
           ref={CourseContainerRef}
         >
           {courses.map((course, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5}}
-                  whileHover={{ y: -5 }}
-                  className="flex flex-nowrap "
-                >
-                  <PurshacedCourseCard
-                    course={course}
-                    course_metadata={course_metadata[i]}
-                  />
-                </motion.div>
-              ))}
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ y: -5 }}
+              className="flex flex-nowrap "
+            >
+              <PurshacedCourseCard
+                course={course}
+                course_metadata={course_metadata[i]}
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </>
