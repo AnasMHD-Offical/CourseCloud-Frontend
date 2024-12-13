@@ -146,7 +146,7 @@ function CourseCard({
             <Button
               onClick={
                 BtnText === "Add to Cart" || ""
-                  ? () => handleAddToCart()
+                  ? handleAddToCart
                   : () => navigate("/cart")
               }
               className="w-full rounded-full  text-white bg-gradient-to-r from-primary to-purple-600 hover:bg-primary-dark transition-colors duration-300"
