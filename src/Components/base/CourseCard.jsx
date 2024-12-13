@@ -20,7 +20,7 @@ function CourseCard({
     (state) => state?.student?.student_data?.student?._id
   );
   const [isChanged, setIsChanged] = useState();
-  const [BtnText, SetBtnText] = useState("add_to_cart");
+  const [BtnText, SetBtnText] = useState("Add to Cart");
   const navigate = useNavigate();
   const { title, subtitle, thumbnail, rating, reviews, actual_price } = course;
 
@@ -144,7 +144,7 @@ function CourseCard({
           {!isPurchased && (
             <Button
               onClick={
-                BtnText === "add_to_cart" || ""
+                BtnText === "Add to Cart" || ""
                   ? () => handleAddToCart()
                   : () => navigate("/cart")
               }
