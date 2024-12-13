@@ -33,8 +33,8 @@ function CourseCard({
       });
       const { success, message } = response?.data;
       if (success) {
-        setIsChanged(!isChanged);
         toast.success(message);
+        // setIsChanged(!isChanged);
         // console.log(response);
         mutation(false);
       }
