@@ -723,7 +723,7 @@ export default function Purshased_Course_Overview() {
                                         : lessonProgresses[index]
                                             ?.video_tutorial_completed
                                         ? 100
-                                        : 100
+                                        : 0
                                     }% completed`}
                               </Badge>
                             </div>
