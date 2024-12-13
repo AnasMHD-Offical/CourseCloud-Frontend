@@ -267,17 +267,6 @@ export default function All_Course_Component() {
               </div>
             </div> */}
             <TabsContent className="mt-6" value={activeTab}>
-              {purchasedCourses.length === 0 && (
-                <div className="p-2 ml-2">
-                  <h1 className="text-3xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-                    Oops!No Courses purchased
-                  </h1>
-                  <p>
-                    Unlock endless opportunities and transform your life.
-                    Explore our wide range of courses today!
-                  </p>
-                </div>
-              )}
               {isLoading && purchasedCourses.length !== 0 ? (
                 <ContainerSkelton />
               ) : (

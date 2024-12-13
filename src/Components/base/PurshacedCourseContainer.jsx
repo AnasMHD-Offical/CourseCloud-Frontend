@@ -44,6 +44,17 @@ function PurshacedCourseContainer({ courses, title, course_metadata }) {
               />
             </motion.div>
           ))}
+          {courses.length === 0 && (
+            <div className="p-2">
+              <h1 className="text-3xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                Oops!No Courses purchased
+              </h1>
+              <p>
+                Unlock endless opportunities and transform your life. Explore
+                our wide range of courses today!
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </>
