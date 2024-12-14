@@ -239,22 +239,6 @@ export default function CartPage() {
                                   </TooltipContent>
                                 </Tooltip>
                               </TooltipProvider>
-                              <TooltipProvider>
-                                <Tooltip>
-                                  <TooltipTrigger asChild>
-                                    <Button
-                                      variant="ghost"
-                                      size="icon"
-                                      className="text-purple-600 hover:text-purple-700 hover:bg-blue-50"
-                                    >
-                                      <Heart className="w-5 h-5" />
-                                    </Button>
-                                  </TooltipTrigger>
-                                  <TooltipContent>
-                                    <p>Save for later</p>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
                             </div>
                           </div>
                         </div>
