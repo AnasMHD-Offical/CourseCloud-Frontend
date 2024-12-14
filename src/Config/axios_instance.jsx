@@ -92,34 +92,3 @@ axios_instance.interceptors.response.use(
 
   }
 );
-    //     // Handle other cases, like trying to refresh the access token
-    //     if (
-    //       error.response.status === 401 &&
-    //       error.response.data.message === "Not authorized, token failed" &&
-    //       !original_request._retry
-    //     ) {
-    //       original_request._retry = true;
-
-    //       try {
-    //         const response = await axios_instance.post(
-    //           "/api/refresh_token",
-    //           {},
-    //           {
-    //             withCredentials: true,
-    //           }
-    //         );
-    //         console.log(response);
-
-    //         // Set the new Authorization header
-    //         axios_instance.defaults.headers.common[
-    //           "Authorization"
-    //         ] = `Bearer ${response?.data?.access_token}`;
-
-    //         return axios_instance(original_request); // Retry the original request
-    //       } catch (error) {
-    //         console.log("Error refreshing token:", error);
-    //         return Promise.reject(error);
-    //       }
-    //     }
-
-    //     return Promise.reject(error);

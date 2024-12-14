@@ -308,7 +308,7 @@ export default function CartPage() {
 
                 <div className="space-y-4">
                   <div className="flex gap-2">
-                    <Input
+                    {/* <Input
                       placeholder="Enter coupon code"
                       value={couponCode}
                       onChange={(e) => setCouponCode(e.target.value)}
@@ -322,7 +322,7 @@ export default function CartPage() {
                       disabled={isApplying}
                     >
                       {isApplying ? "Applying..." : "Apply"}
-                    </Button>
+                    </Button> */}
                   </div>
                   <RazorpayPayment
                     price={calculateTotal() - calculateDiscount()}
