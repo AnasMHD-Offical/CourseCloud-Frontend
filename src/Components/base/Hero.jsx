@@ -1,7 +1,9 @@
 import { Play } from "lucide-react";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-function Hero({ heroRef , heroOpacity , heroScale}) {
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
+function Hero({ heroRef, heroOpacity, heroScale }) {
   return (
     <>
       <motion.section
@@ -24,19 +26,21 @@ function Hero({ heroRef , heroOpacity , heroScale}) {
               learning journey today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-primary hover:bg-primary/90"
-              >
-                Explore Courses
-              </Button>
-              <Button
+              <AnchorLink href="#course">
+                <Button
+                  size="lg"
+                  className="text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-primary hover:bg-primary/90"
+                >
+                  Explore Courses
+                </Button>
+              </AnchorLink>
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <Play className="w-5 h-5 mr-2" /> Watch Demo
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
           <motion.div
@@ -45,7 +49,7 @@ function Hero({ heroRef , heroOpacity , heroScale}) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <motion.div className="relative" whileHover={{ scale: 1.05 }} >
+            <motion.div className="relative" whileHover={{ scale: 1.05 }}>
               <img
                 src="https://res.cloudinary.com/dtc1xcil8/image/upload/v1730556641/dhil48sknbltoebtjupu.jpg"
                 alt="Students learning"

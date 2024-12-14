@@ -11,7 +11,7 @@ function PurshacedCourseContainer({ courses, title, course_metadata }) {
 
   return (
     <>
-      <div className="container mx-auto px-4">
+      <div id="course" className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
             {title}
