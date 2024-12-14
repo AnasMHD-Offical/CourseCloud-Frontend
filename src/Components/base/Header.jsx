@@ -11,6 +11,7 @@ import {
   Award,
   User,
   GraduationCap,
+  User2,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
@@ -221,20 +222,21 @@ function Header({ isScrolled, page }) {
               </Button>
             )}
             {page !== "landing" && (
-              <Avatar>
-                <AvatarImage
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                  // onClick={hadleSettingsNavigate}
-                  onMouseEnter={() => setIsStudentDropdownOpen(true)}
-                  onMouseLeave={() => setIsStudentDropdownOpen(false)}
-                  // onClick={handleStudentDropdown}
-                  src="https://res.cloudinary.com/dtc1xcil8/image/upload/v1730571309/openart-image_z-cDRKP9_1730556373858_raw_rpgts8.jpg"
-                  alt="profile-navigator"
-                />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
+              // <Avatar>
+              //   <AvatarImage
+              //     width={40}
+              //     height={40}
+              //     className="rounded-full"
+              //     // onClick={hadleSettingsNavigate}
+              //     onMouseEnter={() => setIsStudentDropdownOpen(true)}
+              //     onMouseLeave={() => setIsStudentDropdownOpen(false)}
+              //     // onClick={handleStudentDropdown}
+              //     src="https://res.cloudinary.com/dtc1xcil8/image/upload/v1730571309/openart-image_z-cDRKP9_1730556373858_raw_rpgts8.jpg"
+              //     alt="profile-navigator"
+              //   />
+              //   <AvatarFallback>CN</AvatarFallback>
+              // </Avatar>
+              <User2 />
             )}
             {/* Hamburger for mobile device naviagtion*/}
             <Button
