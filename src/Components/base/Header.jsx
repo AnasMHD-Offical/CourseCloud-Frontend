@@ -236,7 +236,7 @@ function Header({ isScrolled, page }) {
               //   />
               //   <AvatarFallback>CN</AvatarFallback>
               // </Avatar>
-              <User2 />
+              <User2 className="w-8 h-8"/>
             )}
             {/* Hamburger for mobile device naviagtion*/}
             <Button
