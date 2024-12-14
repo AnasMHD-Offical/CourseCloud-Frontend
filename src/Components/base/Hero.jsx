@@ -26,14 +26,14 @@ function Hero({ heroRef, heroOpacity, heroScale }) {
               learning journey today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <AnchorLink href="#course">
+              {/* <AnchorLink href="#course">
                 <Button
                   size="lg"
                   className="text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-primary hover:bg-primary/90"
                 >
                   Explore Courses
                 </Button>
-              </AnchorLink>
+              </AnchorLink> */}
               {/* <Button
                 size="lg"
                 variant="outline"
