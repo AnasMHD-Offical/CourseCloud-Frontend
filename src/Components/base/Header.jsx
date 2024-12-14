@@ -236,7 +236,15 @@ function Header({ isScrolled, page }) {
               //   />
               //   <AvatarFallback>CN</AvatarFallback>
               // </Avatar>
-              <User2 className="w-8 h-8"/>
+              <Button
+                variant="ghost"
+                size="icon"
+                onMouseEnter={() => setIsStudentDropdownOpen(true)}
+                onMouseLeave={() => setIsStudentDropdownOpen(false)}
+                className="hover:bg-primary/10 transition-colors relative"
+              >
+                <User2 className="w-8 h-8" />
+              </Button>
             )}
             {/* Hamburger for mobile device naviagtion*/}
             <Button
